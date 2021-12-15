@@ -1,26 +1,18 @@
-import collections
+class Node:
+    def __init__(self,item, next):
+        self.item = item
+        self.next = next
 
+class Stack:
+    def __init__(self):
+        self.last = None
 
-def getSimilar(cur, words):
-    result = []
-    for word in words:
-        if sum([0 if a == b else 1 for a, b in zip(cur, word)]) == 1:
-            result.append(word)
-    return result
+    def push(self, item):
+        self.last = Node(item, self.last)
 
+    def pop(self):
+        item = self.last.item
+        self.last = self.last.next
+        return item
 
-def solution(begin, target, words):
-    if target not in words:
-        return 0
-
-    Q = collections.deque()
-    Q.append([begin, words, 0])
-
-    while Q:
-        cur, cur_words, cnt = Q.popleft()
-        similars = getSimilar(cur, cur_words)
-        print(similars)
-
-    return 0
-
-solution("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"])
+a = ListNode(None)
