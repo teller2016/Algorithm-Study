@@ -1,0 +1,11 @@
+
+1. None일 경우 0 혹은 None을 리턴한다
+if not root:
+    return None
+    아니면
+    return 0
+
+2. 총 갯수 구하는 거면 함수+함수를 리턴해라
+return rec(left) + rec(right)
+
+3.
