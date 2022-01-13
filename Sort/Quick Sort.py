@@ -1,7 +1,7 @@
 def quicksort(A, lo, hi):
     def partition(lo, hi):
         pivot = A[hi]
-        left = lo
+        left = lo       # pivot보다 작은 값 옮길 위치
 
         for right in range(lo, hi):
             if A[right] < pivot:
