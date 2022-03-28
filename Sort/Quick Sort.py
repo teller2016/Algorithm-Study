@@ -13,7 +13,7 @@ def quicksort(A, lo, hi):
 
     if lo < hi:
         pivot = partition(lo, hi)
-        quicksort(A, lo, pivot - 1)
+        quicksort(A, lo, pivot - 1)         # pivot 값은 정렬된 위치에 지정되기에 pivot-1 까지하면 된다
         quicksort(A, pivot + 1, hi)
 
     return A
